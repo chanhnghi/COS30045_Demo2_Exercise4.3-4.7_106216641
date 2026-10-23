@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 4.1 — SVG House</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+  </style>
+</head>
+<body>
+  <svg width="530" height="525" viewBox="0 0 530 525" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="house-title">
+    <title id="house-title">A house with a tree, sun, and winding path</title>
+    <rect x="0" y="0" width="530" height="320" fill="skyblue" />
+    <rect x="0" y="320" width="530" height="205" fill="green" />
+    <circle cx="425" cy="105" r="42" fill="yellow" />
+
+    <rect x="85" y="255" width="22" height="118" fill="sienna" />
+    <circle cx="75" cy="225" r="32" fill="forestgreen" />
+    <circle cx="115" cy="225" r="32" fill="forestgreen" />
+    <circle cx="96" cy="245" r="32" fill="forestgreen" />
+
+    <rect x="160" y="215" width="215" height="158" fill="saddlebrown" />
+    <polygon points="160,215 267,108 375,215" fill="peru" />
+    <rect x="181" y="235" width="43" height="42" fill="lightblue" />
+    <rect x="310" y="235" width="43" height="42" fill="lightblue" />
+    <rect x="246" y="288" width="43" height="85" fill="sienna" />
+    <circle cx="278" cy="331" r="5.5" fill="black" />
+
+    <path d="M245 525 C220 490, 145 460, 150 425 C155 395, 210 380, 260 373"
+      fill="none" stroke="orange" stroke-width="5" />
+    <path d="M295 525 C270 490, 170 460, 175 425 C180 395, 230 380, 275 373"
+      fill="none" stroke="orange" stroke-width="5" />
+    <text x="405" y="310" font-family="Arial" font-size="28" fill="black">House</text>
+  </svg>
+</body>
+</html>
