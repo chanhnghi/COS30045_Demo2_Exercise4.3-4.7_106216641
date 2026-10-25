@@ -1,45 +1,224 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>COS30045 · Demonstration 2</title>
   <style>
-    :root { font-family: Arial, sans-serif; color: #193b34; background: #f3f7f3; }
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    main { width: min(100% - 32px, 1080px); margin: 0 auto; padding: 46px 0 70px; }
-    .eyebrow { color: #29816b; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-    h1 { margin: 12px 0; font-size: clamp(36px, 6vw, 64px); line-height: 1.05; }
-    .lead { max-width: 730px; color: #526e63; font-size: 19px; line-height: 1.55; }
-    .weeks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 36px; }
-    section { padding: 26px; border: 1px solid #d5e6db; border-radius: 18px; background: white; box-shadow: 0 12px 30px #193b340a; }
-    h2 { margin: 0 0 18px; font-size: 25px; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li + li { margin-top: 12px; }
-    a { color: #166d5a; }
-    section a { display: block; padding: 14px 16px; border-radius: 10px; background: #ecf6f0; font-weight: 700; text-decoration: none; }
-    section a:hover, section a:focus-visible { background: #d8eee2; text-decoration: underline; }
-    small { display: block; margin-top: 6px; color: #5c766b; font-weight: 400; line-height: 1.4; }
-    footer { margin-top: 30px; color: #5c766b; font-size: 14px; }
+    :root {
+      font-family: Arial, sans-serif;
+      color: #193b34;
+      background: #f3f7f3;
+    }
 
-.site-nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 12px 0 18px; margin: 0 0 24px; border-bottom: 1px solid #e2e8f0; background: #fff; }
-.site-brand { font-size: 13px; font-weight: 750; color: #334155; letter-spacing: .04em; white-space: nowrap; }
-.site-nav-links { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-.site-nav-links a { display: inline-block; padding: 8px 12px; border-radius: 7px; color: #475569; font-size: 14px; font-weight: 600; text-decoration: none; }
-.site-nav-links a:hover, .site-nav-links a:focus-visible { background: #f1f5f9; color: #1e3a5f; }
-.site-nav-links a[aria-current="page"] { background: #e9eef7; color: #1e3a5f; }
-@media (max-width: 600px) { .site-nav { align-items: flex-start; } .site-brand { width: 100%; } .site-nav-links { gap: 2px; } .site-nav-links a { padding: 7px 9px; } }
+    * {
+      box-sizing: border-box;
+    }
 
-:root { color: #172334; background: #ffffff; }
-main { width: min(100% - 36px, 1200px); padding: 0 0 60px; }
-.eyebrow { color: #345c91; }
-.lead, small, footer { color: #536171; }
-section { border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: none; }
-section a { background: #f8fafc; color: #244c7d; border: 1px solid #edf1f5; border-radius: 8px; }
-section a:hover, section a:focus-visible { background: #eef3fa; }
+    body {
+      margin: 0;
+    }
+
+    main {
+      width: min(100% - 32px, 1080px);
+      margin: 0 auto;
+      padding: 46px 0 70px;
+    }
+
+    .eyebrow {
+      color: #29816b;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.05;
+    }
+
+    .lead {
+      max-width: 730px;
+      color: #526e63;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    .weeks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    section {
+      padding: 26px;
+      border: 1px solid #d5e6db;
+      border-radius: 18px;
+      background: white;
+      box-shadow: 0 12px 30px #193b340a;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 25px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li+li {
+      margin-top: 12px;
+    }
+
+    a {
+      color: #166d5a;
+    }
+
+    section a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: #ecf6f0;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    section a:hover,
+    section a:focus-visible {
+      background: #d8eee2;
+      text-decoration: underline;
+    }
+
+    small {
+      display: block;
+      margin-top: 6px;
+      color: #5c766b;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #5c766b;
+      font-size: 14px;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 12px 0 18px;
+      margin: 0 0 24px;
+      border-bottom: 1px solid #e2e8f0;
+      background: #fff;
+    }
+
+    .site-brand {
+      font-size: 13px;
+      font-weight: 750;
+      color: #334155;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .site-nav-links a {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 7px;
+      color: #475569;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-nav-links a:hover,
+    .site-nav-links a:focus-visible {
+      background: #f1f5f9;
+      color: #1e3a5f;
+    }
+
+    .site-nav-links a[aria-current="page"] {
+      background: #e9eef7;
+      color: #1e3a5f;
+    }
+
+    @media (max-width: 600px) {
+      .site-nav {
+        align-items: flex-start;
+      }
+
+      .site-brand {
+        width: 100%;
+      }
+
+      .site-nav-links {
+        gap: 2px;
+      }
+
+      .site-nav-links a {
+        padding: 7px 9px;
+      }
+    }
+
+    :root {
+      color: #172334;
+      background: #ffffff;
+    }
+
+    main {
+      width: min(100% - 36px, 1200px);
+      padding: 0 0 60px;
+    }
+
+    .eyebrow {
+      color: #345c91;
+    }
+
+    .lead,
+    small,
+    footer {
+      color: #536171;
+    }
+
+    section {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      box-shadow: none;
+    }
+
+    section a {
+      background: #f8fafc;
+      color: #244c7d;
+      border: 1px solid #edf1f5;
+      border-radius: 8px;
+    }
+
+    section a:hover,
+    section a:focus-visible {
+      background: #eef3fa;
+    }
   </style>
 </head>
+
 <body>
   <main>
     <nav class="site-nav" aria-label="Main navigation">
@@ -59,23 +238,28 @@ section a:hover, section a:focus-visible { background: #eef3fa; }
       <section aria-labelledby="week4">
         <h2 id="week4">Week 4</h2>
         <ul>
-          <li><a href="../COS30045_Demo2_Exercise4.1_106216641/index.html">Exercise 4.1 · SVG house<small>An original Garden Cottage drawing and coordinate annotations.</small></a></li>
-          <li><a href="index.html">Exercises 4.3–4.7 · Bar chart<small>One page, from CSV import through data binding, scaling, and labels.</small></a></li>
+          <li><a href="../COS30045_Demo2_Exercise4.1_106216641/index.html">Exercise 4.1 · SVG house<small>An original
+                Garden Cottage drawing and coordinate annotations.</small></a></li>
+          <li><a href="index.html">Exercises 4.3–4.7 · Bar chart<small>One page, from CSV import through data binding,
+                scaling, and labels.</small></a></li>
         </ul>
       </section>
       <section aria-labelledby="week5">
         <h2 id="week5">Week 5</h2>
         <ul>
-          <li><a href="../COS30045_Demo2_Exercise5_106216641/index.html">Exercise 5 · Multi-chart page<small>Vertical bar, line, and donut charts on one page.</small></a></li>
+          <li><a href="../COS30045_Demo2_Exercise5_106216641/index.html">Exercise 5 · Multi-chart page<small>Vertical
+                bar, line, and donut charts on one page.</small></a></li>
         </ul>
       </section>
       <section aria-labelledby="week6">
         <h2 id="week6">Week 6</h2>
         <ul>
-          <li><a href="../COS30045_Demo2_Exercise6_106216641/index.html">Exercise 6 · Interactivity<small>Histogram filters and scatterplot tooltips on one page.</small></a></li>
+          <li><a href="../COS30045_Demo2_Exercise6_106216641/index.html">Exercise 6 · Interactivity<small>Histogram
+                filters and scatterplot tooltips on one page.</small></a></li>
         </ul>
       </section>
     </div>
   </main>
 </body>
+
 </html>
