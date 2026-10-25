@@ -1,5 +1,5 @@
-# Local copies used to preview the website hub with Live Server.
-# The submitted exercises live in their own repositories.
+# Prevent accidental copies of the other exercises from entering this repository.
+# Their actual pages live in sibling repositories under Github_Repos.
 /exercise-4-1/
 /exercise-5/
 /exercise-6/
