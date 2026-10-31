@@ -10,8 +10,7 @@ const svg = d3.select(".responsive-svg-container")
   .append("svg")
   .attr("viewBox", `0 0 ${chartWidth} ${chartHeight}`)
   .attr("role", "img")
-  .attr("aria-label", "Horizontal bar chart of TV model counts, with labels for 25 brands")
-  .style("border", "1px solid #c5d8cc");
+  .attr("aria-label", "Horizontal bar chart of TV model counts, with labels for 25 brands");
 const innerChart = svg.append("g")
   .attr("transform", `translate(${margin.left},${margin.top})`);
 
